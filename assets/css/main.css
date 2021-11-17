@@ -2263,7 +2263,7 @@ input, select, textarea {
 				background-color: #e8edec;
 			}
 
-			#main > section ul.leftalign {
+			#main > section ul {
 				text-align: left;
 			}
 
@@ -2581,7 +2581,7 @@ input, select, textarea {
 
 /* Mobile */
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 1500px) {
 
 		/* Basic */
 
@@ -2613,7 +2613,7 @@ input, select, textarea {
 			}
 
 			#main section.cover {
-				padding: 10em 0em;
+				padding: 12em 0em;
 			}
 
 				#main section.cover header {
