@@ -126,7 +126,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 2em;
+		font-size: 4.0em;
 		letter-spacing: -1px;
 	}
 
@@ -2593,6 +2593,10 @@ input, select, textarea {
 				font-size: 1.5em;
 				letter-spacing: 0;
 				font-weight: 300;
+			}
+
+			h2.alt {
+				font-size: 4em;
 			}
 
 			.container {
