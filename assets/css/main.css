@@ -127,6 +127,7 @@ input, select, textarea {
 
 	h2 {
 		font-size: 4.0em;
+		font-weight: bold;
 		letter-spacing: -1px;
 	}
 
@@ -140,6 +141,10 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 1.25em
 	}
 
 	header {
@@ -203,7 +208,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 	br.clear {
@@ -1742,6 +1747,41 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
+/* Sections/Article */
+
+section, article {
+	margin-bottom: 3em;
+}
+
+	section > :last-child, section:last-child, article > :last-child, article:last-child {
+		margin-bottom: 0;
+	}
+
+	section.special > header, section.special > footer, article.special > header, article.special > footer {
+		text-align: center;
+	}
+
+
+.row > section, .row > article {
+	margin-bottom: 0;
+}
+
+header {
+	margin: 0 0 1em 0;
+}
+
+	header > p {
+		display: block;
+		font-size: 1.5em;
+		margin: 1em 0 2em 0;
+		line-height: 1.5em;
+		text-align: inherit;
+	}
+
+footer {
+	margin: 2.5em 0 0 0;
+}
+
 /* Image */
 
 	.image {
@@ -1773,7 +1813,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			margin: 0 0 4em 0;
 		}
 
 		.image.left {
@@ -1791,6 +1831,129 @@ input, select, textarea {
 				width: auto;
 			}
 
+/* Carousel */
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+	padding: 2em 0 2em 0;
+	margin-bottom: 0;
+}
+
+	.carousel .forward, .carousel .backward {
+		position: absolute;
+		top: 50%;
+		width: 6em;
+		height: 12em;
+		margin-top: -6em;
+		cursor: pointer;
+	}
+
+		.carousel .forward:before, .carousel .backward:before {
+			content: '';
+			display: block;
+			width: 6em;
+			height: 6em;
+			border-radius: 100%;
+			background-color: rgba(72, 57, 73, 0.5);
+			position: absolute;
+			top: 50%;
+			margin-top: -3em;
+			-moz-transition: background-color 0.35s ease-in-out;
+			-webkit-transition: background-color 0.35s ease-in-out;
+			-o-transition: background-color 0.35s ease-in-out;
+			-ms-transition: background-color 0.35s ease-in-out;
+			transition: background-color 0.35s ease-in-out;
+			-webkit-backface-visibility: hidden;
+		}
+
+		.carousel .forward:after, .carousel .backward:after {
+			content: '';
+			width: 3em;
+			height: 3em;
+			position: absolute;
+			top: 50%;
+			margin: -1.5em 0 0 0;
+			background: url("images/arrow.svg") no-repeat center center;
+		}
+
+		.carousel .forward:hover:before, .carousel .backward:hover:before {
+			background-color: rgba(239, 131, 118, 0.75);
+		}
+
+	.carousel .forward {
+		right: 0;
+	}
+
+		.carousel .forward:before {
+			right: -3em;
+		}
+
+		.carousel .forward:after {
+			right: -0.25em;
+		}
+
+	.carousel .backward {
+		left: 0;
+	}
+
+		.carousel .backward:before {
+			left: -3em;
+		}
+
+		.carousel .backward:after {
+			left: -0.25em;
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			transform: scaleX(-1);
+		}
+
+	.carousel .reel {
+		white-space: nowrap;
+		position: relative;
+		-webkit-overflow-scrolling: touch;
+		padding: 0 2em 0 2em;
+	}
+
+	.carousel article {
+		display: inline-block;
+		width: 18em;
+		background: #fff;
+		text-align: center;
+		padding: 0 1em 3em 1em;
+		margin: 0 2em 0 0;
+		white-space: normal;
+		opacity: 1.0;
+		-moz-transition: opacity 0.75s ease-in-out;
+		-webkit-transition: opacity 0.75s ease-in-out;
+		-ms-transition: opacity 0.75s ease-in-out;
+		transition: opacity 0.75s ease-in-out;
+	}
+
+		.carousel article.loading {
+			opacity: 0.0;
+		}
+
+		.carousel article .image {
+			position: relative;
+			left: -1em;
+			top: 0;
+			width: auto;
+			margin-right: -2em;
+			margin-bottom: 3em;
+		}
+
+		.carousel article p.proj {
+			text-align: center;
+			font-size: 0.75em;
+			line-height: 1.25em;
+		}
+		
+		.carousel article strong {
+			font-weight: bold;
+		}
+
 /* List */
 
 	ul {
@@ -1800,6 +1963,11 @@ input, select, textarea {
 
 		ul li {
 			padding-left: 0.5em;
+		}
+
+		ul.proj{
+			font-size: 0.75em;
+			line-height: 1.25em;
 		}
 
 	ol {
@@ -2263,7 +2431,23 @@ input, select, textarea {
 				background-color: #e8edec;
 			}
 
-			#main > section ul {
+			#main > section.five {
+				background-color: #f5fafa;
+			}
+
+			#main > section.six {
+				background-color: #ecf1f1;
+			}
+
+			#main > section.seven {
+				background-color: #e8edec;
+			}
+
+			#main > section ul, ol {
+				text-align: left;
+			}
+
+			#main > section.container > p.left {
 				text-align: left;
 			}
 
@@ -2293,6 +2477,21 @@ input, select, textarea {
 
 			#main {
 				margin-left: 300px;
+			}
+
+		/* Carousel */
+
+		.carousel {
+			padding: 1.5em 0 1.5em 0;
+		}
+
+			.carousel .reel {
+				padding: 0 1.5em 0 1.5em;
+			}
+
+			.carousel article {
+				width: 18em;
+				margin: 0 1.25em 0 0;
 			}
 
 	}
@@ -2577,6 +2776,17 @@ input, select, textarea {
 					padding: 4em 0;
 				}
 
+		/* Carousel */
+
+		.carousel {
+			padding: 1.25em 0 1.25em 0;
+		}
+
+			.carousel article {
+				width: 18em;
+				margin: 0 1em 0 0;
+			}
+
 	}
 
 /* Mobile */
@@ -2592,12 +2802,14 @@ input, select, textarea {
 			h2 {
 				font-size: 1.5em;
 				letter-spacing: 0;
-				font-weight: 300;
+				font-weight: 500;
 			}
 
 			h2.alt {
+				font-weight: 300;
 				font-size: 4em;
 			}
+
 
 			.container {
 				padding: 0 15px 0 15px;
@@ -2638,4 +2850,38 @@ input, select, textarea {
 					margin-top: 0;
 				}
 
+		/* Image */
+
+		.image.featured {
+			margin: 0 0 2em 0;
+		}
+
+		.image.left {
+			margin: 0 1em 1em 0;
+		}
+
+		.image.centered {
+			margin: 0 0 1em 0;
+		}
+		
+		/* Carousel */
+
+		.carousel {
+			padding: 0.5em 0 0.5em 0;
+		}
+
+			.carousel .reel {
+				padding: 0 0.5em 0 0.5em;
+			}
+
+			.carousel article {
+				width: 14em;
+				padding-bottom: 2em;
+				margin: 0 0.5em 0 0;
+			}
+
+				.carousel article .image {
+					margin-bottom: 2em;
+				}
 	}
+
