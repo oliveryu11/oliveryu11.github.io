@@ -207,7 +207,7 @@ input, select, textarea {
 		font-style: italic;
 	}
 
-	p, ul, ol, dl, table {
+	p, ul, ol, dl, h4, table {
 		margin-bottom: 1em;
 	}
 
@@ -2881,7 +2881,7 @@ footer {
 			}
 
 				.carousel article .image {
-					margin-bottom: 2em;
+					margin-bottom:2em;
 				}
 	}
 

@@ -26,7 +26,7 @@
 			normal:    [ '961px',  '1620px' ],
 			narrow:    [ '961px',  '1320px' ],
 			narrower:  [ '737px',  '960px'  ],
-			mobile:    [ null,     '736px'  ]
+			mobile:    [ null,     '1500px' ]
 		});
 
 	// Play initial animations on page load.
@@ -183,7 +183,7 @@
 			// Main.
 				$t._update = function() {
 					pos = 0;
-					rightLimit = (-1 * reelWidth) + $window.width();
+					rightLimit = (-1 * reelWidth) - 255 + $window.width();
 					leftLimit = 0;
 					$t._updatePos();
 				};
