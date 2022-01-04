@@ -1916,9 +1916,11 @@ footer {
 		padding: 0 2em 0 2em;
 	}
 
+	
+
 	.carousel article {
 		display: inline-block;
-		width: 18em;
+		width: 30em;
 		background: #fff;
 		text-align: center;
 		padding: 0 1em 3em 1em;
@@ -1936,9 +1938,12 @@ footer {
 		}
 
 		.carousel article .image {
+			display: inline-block;
+			vertical-align: middle;
 			position: relative;
 			left: -1em;
 			top: 0;
+			height: 10em;
 			width: auto;
 			margin-right: -2em;
 			margin-bottom: 3em;
@@ -2443,6 +2448,10 @@ footer {
 				background-color: #e8edec;
 			}
 
+			#main > section.eight {
+				background-color: #f5fafa;
+			}
+
 			#main > section ul, ol {
 				text-align: left;
 			}
@@ -2551,8 +2560,8 @@ footer {
 
 			#nav ul li a {
 				font-size: 0.8em;
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
+				padding-top: 0.25em;
+				padding-bottom: 0.25em;
 			}
 
 				#nav ul li a span {
